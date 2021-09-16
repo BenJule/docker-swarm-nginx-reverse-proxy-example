@@ -9,19 +9,20 @@ services:
       - swarm-network
     ports:
       - 80:80
+      - 443:443
 
-  service-1:
-    image: service-1
+  s3root-ovh:
+    image: s3root-ovh
     build:
-      context: service-1
+      context: s3root-ovh
       dockerfile: Dockerfile
     networks:
       - swarm-network
 
-  service-2:
-    image: service-2
+  benlue-ovh:
+    image: benlue-ovh
     build:
-      context: service-2
+      context: benlue-ovh
       dockerfile: Dockerfile
     networks:
       - swarm-network
